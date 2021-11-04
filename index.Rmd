@@ -1,0 +1,11 @@
+---
+title: "Tamara Hofer"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# This is Tamara Hofer's website
+
+Here is my [about](about.html) page. 
