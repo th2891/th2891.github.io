@@ -6,7 +6,112 @@ output:
     toc_float: true
 ---
 
-This is my about me page. 
-Here's back to the [index](index.html) page. 
+## Tamara Hofer
+
+![](load/photo.jpeg) 
+
+
+### EDUCATION
+
+Columbia University Mailman School of Public Health, New York, NY
+Master of Public Health in Epidemiology Certificate in Epidemiology of Chronic Disease	 Expected 2022
+
+Coursework: Chronic Disease Epidemiology, Statistical Software and Data Analysis Skills using SAS, and epidemiological methods and theory 
+
+University of Michigan, Ann Arbor, MI
+Bachelor of Science in Program in the Environment 	
+
+
+2017
+
+Awards: University Honors 
+
+### **PUBLIC HEALTH EXPERIENCE**
+
+**International Rescue Committee** (Through AmeriCorps), Atlanta, GA
+
+*Health Associate*	2018-19
+
+- Provided healthcare orientation for 500+ recently arrived refugees, connected clients to primary care
+
+- Coordinated 900+ appointments: scheduling, transportation, interpretation, follow-up instructions 
+
+- Managed emergency health situations for clients, facilitated access to care including hospital pick-ups and emergency room visits
+
+**Fresh Harvest**, Atlanta, GA 
+
+*Farm Assistant*	2018
+
+- Performed daily labor of small-scale sustainable agriculture including soil preparation, crop maintenance, and harvest
+
+- Assembled customer orders to fulfill weekly produce boxes
+
+- Learned about socially and environmentally responsible small businesses 
+
+**Community Health and Social Services (CHASS) Center**, Detroit, MI
+
+*Fresh Prescription Market Manager*	2015
+
+- Managed voucher program providing fresh produce to patients with uncontrolled diabetes and enrolling individuals in educational courses on best disease management methods 
+
+- Organized weekly events and on-site farmer’s market for patients, staff, and community
+
+- Collaborated with farmers, schools, insurance companies, and local artists to provide public cultural and educational events including cooking demonstrations and nutrition workshops in English and Spanish 
+
+**The American Cancer Society**, Ann Arbor, MI
+
+*Patient Assistant* at Veterans Affairs Hospital through Project Outreach U of M	2015
+
+- Assisted newly diagnosed cancer patients in understanding resources provided by ACS through one-on-one meetings at oncology appointments
+
+- Shadowed Registered Nurse during oncology appointments
+
+### **ADDITIONAL EXPERIENCE**
+**New American Pathways**, Atlanta, GA 
+
+*Young Women’s Leadership Intern*	2018 
+
+- Assisted in the development of curriculum to empower young refugees through workshops, mentoring, and peer conversations 
+
+- Collected qualitative data and converted to quantitative using Most Significant Change technique to evaluate program efficacy
+
+- Contributed to design of training, literature, and activities for new mentors 
+
+**Public Consulting Group**, Atlanta, GA
+
+*Education Associate*	2017-18
+
+- Tutored and created individualized study plans for 80+ students to position them for graduation and post-secondary options
+
+- Reported and analyzed trends in daily data to monitor student development
+
+### **COMMUNITY INVOLVEMENT** 
+**Primary Care Progress**, New York, NY
+
+*Executive Board Member*
+
+- Active collaboration with students from Vagelos College of Physicians and Surgeons to deliver innovative methods of primary care to with HELP Audubon Women’s Shelter
+	2021
+
+
+**Columbia Health Dispatch**, New York, NY
+
+*Staff writer*
+
+- Create a biweekly summary of the recent news in public health with the goal of increasing understanding and accessibility of credible information
+
+**Gun Violence Action Week**, New York, NY
+*Member of Student Planning Committee*        2021
+
+- Organized week-long events in collaboration with students and staff from Teachers College, Columbia, to hear from academic researchers, community organizations, and program organizers about active nation-wide gun violence prevention efforts
+
+
+
+
+
+
+
+
+Back to the [index](index.html) page. 
 
 
