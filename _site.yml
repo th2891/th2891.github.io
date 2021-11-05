@@ -12,7 +12,7 @@ navbar:
     - icon: class="fab fa-linkedin
       href: https://www.linkedin.com/in/tamara-hofer-635386147/
     - icon: fa-github fa-lg
-      href: http://github.com/<th2891>/
+      href: http://github.com/th2891/
 output:
   html_document:
     theme: cosmo
