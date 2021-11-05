@@ -44,7 +44,7 @@ rest_inspec %>%
 rest_inspec %>%
   mutate(text_label = str_c("Grade: ", grade, "\nName: ", dba)) %>% 
   plot_ly(
-    x = ~zipcode, y = ~building, type = "scatter", mode = "markers",
+    x = ~inspection_date, y = ~score, type = "scatter", mode = "markers",
     color = ~grade, text = ~text_label, alpha = 0.5)
 ```
 
