@@ -5,6 +5,8 @@ navbar:
   right:
     - text: "About"
       href: about.html
+    - text: "Plotly"
+      href: plots.html
     - icon: fa-envelope fa-lg
       href: mailto:<th2981@cumc.columbia.edu>
     - icon: fas fa-sticky-note
