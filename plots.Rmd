@@ -6,26 +6,46 @@ output:
     toc_float: true
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
 ```
 
-## R Markdown
+Loading NYC Restaurant Inspection Data
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+```{r}
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
-```{r cars}
-summary(cars)
+rest_inspec = 
+  rest_inspec
+
 ```
 
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
+```{r}
+rest_inspec = 
+  rest_inspec %>% 
+  select(boro, critical_flag, cuisine_description, dba, inspection_date, score, zipcode, grade, building) %>% 
+  filter(grade %in% c("A", "B", "C", "Z", "P"),
+         cuisine_description %in% c("Italian", "Pizza"))
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+rest_inspec %>% 
+  count(boro) %>% 
+  mutate(boro = fct_reorder(boro, n)) %>% 
+  plot_ly(x = ~boro, y = ~n, color = ~boro, type = "bar", colors = "viridis")
+```
+
+
+```{r}
+rest_inspec %>%
+  mutate(text_label = str_c("Grade: ", grade, "\nName: ", dba)) %>% 
+  plot_ly(
+    x = ~zipcode, y = ~building, type = "scatter", mode = "markers",
+    color = ~grade, text = ~text_label, alpha = 0.5)
+```
+
+  separate(inspection_date, into = c("year", "month", "day"), convert = TRUE)
