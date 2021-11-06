@@ -3,6 +3,8 @@ title: "Tamara Hofer"
 output: html_document
 ---
 
+![](load/photo.jpeg)
+
 ### MPH candidate at Columbia Mailman School of Public Health 
 
 I am a second year MPH candidate in the Department of Epidemiology at Mailman School of Public Health, pursuing a certificate in Epidemiology of Chronic disease. Much of my coursework has been focused on theory and methods of epidemiological research.
@@ -10,7 +12,7 @@ I am a second year MPH candidate in the Department of Epidemiology at Mailman Sc
 After graduation, I hope to pursue a career where I can apply my epidemiological and data analysis skills to further improve access to preventative care for chronic diseases. 
 
 For further information about my work history and experiences, please refer to my [about](about.html) page.
-To view a PDF version, you can find my resume [here](./load/CV_Hofer.pdf), or by clicking the sticky note in the navigation bar. 
+To view a PDF version, you can find my resume [here](./load/CV_Hofer.pdf), or by clicking the file in the navigation bar. 
 
 
 To [plots](plots.html)!

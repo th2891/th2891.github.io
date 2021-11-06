@@ -14,38 +14,52 @@ library(plotly)
 ```
 
 Loading NYC Restaurant Inspection Data
-
 ```{r}
-
-
 rest_inspec = 
   rest_inspec
-
-```
-
-```{r}
-rest_inspec = 
-  rest_inspec %>% 
-  select(boro, critical_flag, cuisine_description, dba, inspection_date, score, zipcode, grade, building) %>% 
-  filter(grade %in% c("A", "B", "C", "Z", "P"),
-         cuisine_description %in% c("Italian", "Pizza"))
 ```
 
 
 ```{r}
 rest_inspec %>% 
-  count(boro) %>% 
-  mutate(boro = fct_reorder(boro, n)) %>% 
-  plot_ly(x = ~boro, y = ~n, color = ~boro, type = "bar", colors = "viridis")
-```
+  count(cuisine_description) %>% 
+  arrange(desc(n))
 
+```
 
 ```{r}
-rest_inspec %>%
-  mutate(text_label = str_c("Grade: ", grade, "\nName: ", dba)) %>% 
-  plot_ly(
-    x = ~inspection_date, y = ~score, type = "scatter", mode = "markers",
-    color = ~grade, text = ~text_label, alpha = 0.5)
+rest_inspec =   
+rest_inspec %>% 
+  select(boro, critical_flag, cuisine_description, dba, inspection_date, score, zipcode, grade, building) %>% 
+    mutate(cuisine_description = recode(cuisine_description, `CafÃ©/Coffee/Tea` = "Cafe", `Latin (Cuban, Dominican, Puerto Rican, South & Central American)` = "Latin")) %>% 
+  filter(grade %in% c("A", "B", "C", "Z", "P"),
+         cuisine_description %in% c("Latin", "Italian", "Cafe", "Mexican", "Japanese", "Caribbean", "Bakery")) 
+
 ```
 
+
+Random sample 
+
+```{r boxplot}
+rest_inspec %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, score)) %>% 
+  plot_ly(y = ~score, color = ~cuisine_description, type = "box", colors = "viridis")
+```
+
+
+```{r histogram}
+rest_inspec %>% 
+  group_by(boro, cuisine_description) %>% 
+  count(boro) %>% 
+  mutate(boro = fct_reorder(boro, n)) %>% 
+  plot_ly(x = ~boro, y = ~n, type = "bar", color = ~cuisine_description)
+```
+
+
+
+```{r scatterplot bad}
+rest_inspec %>%
   separate(inspection_date, into = c("year", "month", "day"), convert = TRUE)
+```
+
+

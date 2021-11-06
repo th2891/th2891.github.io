@@ -9,7 +9,7 @@ navbar:
       href: plots.html
     - icon: fa-envelope fa-lg
       href: mailto:<th2981@cumc.columbia.edu>
-    - icon: fas fa-sticky-note
+    - icon: far fa-file
       href: ./load/CV_Hofer.pdf
     - icon: class="fab fa-linkedin
       href: https://www.linkedin.com/in/tamara-hofer-635386147/
