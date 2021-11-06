@@ -1,0 +1,72 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+```
+
+
+```{r}
+rest_inspec =   
+rest_inspec %>% 
+  select(boro, critical_flag, cuisine_description, dba, inspection_date, score, zipcode, grade, building) %>% 
+    mutate(cuisine_description = recode(cuisine_description, `CafÃ©/Coffee/Tea` = "Cafe", `Latin (Cuban, Dominican, Puerto Rican, South & Central American)` = "Latin")) %>% 
+  filter(grade %in% c("A", "B", "C", "Z", "P"),
+         cuisine_description %in% c("Latin", "Italian", "Cafe", "Mexican", "Japanese", "Caribbean", "Bakery")) 
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Chart A
+
+```{r}
+rest_inspec %>% 
+  group_by(inspection_date) %>% 
+  summarize(
+    mean_score = mean(score)) %>% 
+  plot_ly(type = 'scatter', mode = 'lines') %>% 
+  add_trace(x = ~inspection_date, y = ~mean_score) %>% 
+    layout(
+    title = list("Average score of inspection by date"))
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Chart B
+
+```{r}
+rest_inspec %>% 
+  group_by(boro, cuisine_description) %>% 
+  count(boro) %>% 
+  mutate(boro = fct_reorder(boro, n)) %>% 
+  plot_ly(x = ~boro, y = ~n, type = "bar", color = ~cuisine_description) %>% 
+  layout(
+    title = list("Number of restaurants by cuisine type for each NYC borough"),
+    legend = list(title = "Cuisine Type"),
+    yaxis = list(title = "Number"), 
+    xaxis = list(title = "Borough"))
+```
+
+### Chart C
+
+```{r}
+rest_inspec %>% 
+  mutate(cuisine_description = fct_reorder(cuisine_description, score)) %>% 
+  plot_ly(y = ~score, color = ~cuisine_description, type = "box", colors = "viridis") %>% 
+  layout(
+    title = list("Distribution of inspection scores by cuisine type"))
+```
+

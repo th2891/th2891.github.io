@@ -38,7 +38,6 @@ rest_inspec %>%
 ```
 
 
-Random sample 
 
 ```{r boxplot}
 rest_inspec %>% 

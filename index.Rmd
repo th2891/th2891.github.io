@@ -15,5 +15,5 @@ For further information about my work history and experiences, please refer to m
 To view a PDF version, you can find my resume [here](./load/CV_Hofer.pdf), or by clicking the file in the navigation bar. 
 
 
-To [plots](plots.html)!
+To [Dashboard](dashboard.html)!
 
